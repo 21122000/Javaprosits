@@ -4,9 +4,11 @@ public class Zoo {
     private String city;
     private int nbrCage;
     public Zoo(String name,String city,int nbrCage){
-        this.name = name;
-        this.city =city;
-        this.nbrCage =nbrCage;
+        if (name.equals("")) {
+            this.name = name;
+            this.city = city;
+            this.nbrCage = nbrCage;
+        }else System.out.println("le nom ne peut pas etre vide");
 
     }
 

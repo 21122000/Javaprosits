@@ -6,10 +6,13 @@ public class Animal {
 
     public Animal (String family,String name,int age , boolean isMammal)
     {
-        this.family=family;
-        this.name=name;
-        this.age=age;
-        this.isMammal=isMammal;
+        if(age>0) {
+            this.family = family;
+            this.name = name;
+            this.age = age;
+            this.isMammal = isMammal;
+        }else
+            System.out.println("le age ne peut etre negatif");
    }
    public String getFamily(){return family;}
    public String getName(){return this.name;}
