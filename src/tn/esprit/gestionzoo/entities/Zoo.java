@@ -1,10 +1,12 @@
+package tn.esprit.gestionzoo.entities;
+
 public class Zoo {
     private Animal[] animals=new Animal[25];
     private String name;
     private String city;
     private int nbrCage;
     public Zoo(String name,String city,int nbrCage){
-        if (name.equals("")) {
+        if (name!="") {
             this.name = name;
             this.city = city;
             this.nbrCage = nbrCage;
