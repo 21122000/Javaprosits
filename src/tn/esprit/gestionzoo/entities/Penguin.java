@@ -24,4 +24,7 @@ public class Penguin extends Aquatique {
     {
         System.out.println("swimmingdspeed"+swimmingSpeed);
     }
+    public void eatMeat(Food meat) {
+        System.out.println("le animal penguin  mange "+ meat);
+    }
 }

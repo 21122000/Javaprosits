@@ -27,6 +27,9 @@ public class Dolphin extends Aquatique {
     {
         System.out.println("swimmingdepth"+swimmingDepth);
     }
+    public void eatMeat(Food meat) {
+        System.out.println("le animal dophin  mange "+ meat);
+    }
 
 
 }

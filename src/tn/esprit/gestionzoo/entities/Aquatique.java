@@ -2,8 +2,9 @@ package tn.esprit.gestionzoo.entities;
 
 import java.util.Objects;
 
-public abstract class  Aquatique extends Animal {
+public abstract class  Aquatique extends Animal implements Carnivore<Food> {
     private String habitat;
+
     public Aquatique (String family,String name,int age , boolean isMammal , String habitat)
     {
         super(family,name, age ,isMammal);
@@ -21,6 +22,5 @@ public abstract class  Aquatique extends Animal {
         }
 return false;
     }
-
 
 }

@@ -1,4 +1,5 @@
 package tn.esprit.gestionzoo.entities;
 
-public interface Carnivore {
+public interface Carnivore <T> {
+    public void eatMeat(T meat);
 }

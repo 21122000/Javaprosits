@@ -1,16 +1,18 @@
 package tn.esprit.gestionzoo.entities;
 
 public class Zoo {
-    private Animal[] animals=new Animal[25];
     private String name;
     private String city;
     private int nbrCage;
+    private Animal[] animals;
     private Aquatique[] aquaticAnimals=new Aquatique[10];
     public Zoo(String name,String city,int nbrCage){
+
         if (name!="") {
             this.name = name;
             this.city = city;
             this.nbrCage = nbrCage;
+            animals =new Animal[nbrCage];
         }else System.out.println("le nom ne peut pas etre vide");
 
     }
@@ -38,13 +40,15 @@ public class Zoo {
     public void setNbrCage(int nbrCage) {
         this.nbrCage = nbrCage;
     }
-    public void ajouterAnimal(Animal animal) {
-        int i = 0;
-        while (animals[i]!=null){
-            i++;
+    public void ajouterAnimal(Animal animal) throws ZooFullException{
+        int nbrAnimals=0;
+        if (searchAnimal(animal) != -1)
+            System.out.println("This animal already exist");
+        if (isZooFull()){
+            throw new ZooFullException("The Zoo is full");
         }
-        if((searchAnimal(animal) == -1 && isZooFull()) == false)
-        animals[i]=animal;
+        animals[nbrAnimals] = animal;
+        nbrAnimals++;
 
     }
     public void afficheAnimal(){
